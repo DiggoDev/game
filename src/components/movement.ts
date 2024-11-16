@@ -1,3 +1,3 @@
 export class Movement {
-    constructor(public direction: string) {}
+    constructor(public speed: number, public direction: string) {}
 }
