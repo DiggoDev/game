@@ -1,10 +1,10 @@
-import { Game } from "./core/game"
+import { Game } from './core/game';
 
 async function main() {
-    // Create a PixiJS application.
-    const game = new Game()
+	// Create a PixiJS application.
+	const game = new Game();
 
-    await game.start()
+	await game.start();
 }
 
-main()
+main();

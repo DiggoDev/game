@@ -1,3 +1,1 @@
-export class ImageSystem {
-    
-}
+export class ImageSystem {}
