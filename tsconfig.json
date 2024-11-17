@@ -22,6 +22,7 @@
       "@/core/*": ["src/core/*"], 
       "@/components/*": ["src/components/*"], 
       "@/entities/*": ["src/entities/*"], 
+      "@/scenes/*": ["src/scenes/*"], 
       "@/systems/*": ["src/systems/*"], 
       "@/utils/*": ["src/utils/*"]
     }

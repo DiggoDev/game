@@ -10,7 +10,7 @@ export class PlayerEntity {
 
 	public constructor(texture: Texture) {
 		(this.position = new PositionComponent(100, 200)),
-			(this.movement = new MovementCompnent(5, 'up')),
+			(this.movement = new MovementCompnent(2, 'up')),
 			(this.sprite = new Sprite(texture));
 	}
 }

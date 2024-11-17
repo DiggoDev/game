@@ -10,5 +10,7 @@ export class MovementSystem {
 		} else if (movement.direction === 'down') {
 			position.y += movement.speed;
 		}
+		entity.sprite.x = position.x
+		entity.sprite.y = position.y
 	}
 }

@@ -5,15 +5,15 @@ export class Scene extends Container {
 		super();
 	}
 
-	init() {
+	async init(): Promise<void> {
 		// Initialize assets and objects
 	}
 
-	update(_delta: number) {
+	async update(_delta: number): Promise<void> {
 		// Update game logic
 	}
 
-	destroy() {
+	async destroy(): Promise<void> {
 		// Cleanup assets
 	}
 }
