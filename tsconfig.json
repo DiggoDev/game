@@ -17,6 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "baseUrl": "./",
+    "typeRoots": ["node_modules/@types", "src/types"],
     "paths": {
       "@/core/*": ["src/core/*"], 
       "@/components/*": ["src/components/*"], 
