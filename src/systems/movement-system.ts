@@ -1,7 +1,7 @@
-import { Player } from "@/entities/player";
+import { PlayerEntity } from "@/entities/player-entity";
 
 export class MovementSystem {
-  static update(entity: Player) {
+  static update(entity: PlayerEntity) {
     const position = entity.components.position;
     const movement = entity.components.movement;
 
