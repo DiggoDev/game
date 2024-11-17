@@ -3,8 +3,7 @@
   "packageManager": "yarn@4.5.1",
   "scripts": {
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "pretty": "prettier src --write",
+    "format": "eslint src --fix && prettier src --write",
     "start": "webpack serve"
   },
   "dependencies": {

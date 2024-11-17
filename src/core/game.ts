@@ -8,12 +8,12 @@ import { GameScene } from '@/scenes/game-scene';
 export class Game {
 	private app: Application;
 	private exitGame = false;
-    private sceneManager: SceneManager;
-    private scenes: Record<string, Scene>
+	private sceneManager: SceneManager;
+	private scenes: Record<string, Scene>;
 	constructor() {
 		this.app = new Application();
-        this.sceneManager = new SceneManager(this.app)
-        this.scenes = {}
+		this.sceneManager = new SceneManager(this.app);
+		this.scenes = {};
 	}
 	public async start() {
 		// Init
@@ -23,19 +23,17 @@ export class Game {
 		// Then adding the application's canvas to the DOM body.
 		document.body.appendChild(this.app.canvas);
 
-        this.scenes['game'] = new GameScene()
+		this.scenes['game'] = new GameScene();
 
-
-        await this.sceneManager.changeScene(this.scenes['game'])
+		await this.sceneManager.changeScene(this.scenes['game']);
 
 		// Start game loop
 		this.gameLoop();
 	}
 	private gameLoop() {
-        
-        this.app.ticker.add((ticker) => {
-            if (this.exitGame) ticker.stop();
-            this.sceneManager.update(ticker.deltaMS)
-        })
+		this.app.ticker.add((ticker) => {
+			if (this.exitGame) ticker.stop();
+			this.sceneManager.update(ticker.deltaMS);
+		});
 	}
 }

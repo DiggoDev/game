@@ -2,6 +2,7 @@ import { Sprite, Texture } from 'pixi.js';
 
 import { MovementCompnent } from '@/components/movement-component';
 import { PositionComponent } from '@/components/position-component';
+import { Direction } from '@/utils/enums/direction';
 
 export class PlayerEntity {
 	public position: PositionComponent;
@@ -9,8 +10,11 @@ export class PlayerEntity {
 	public sprite: Sprite;
 
 	public constructor(texture: Texture) {
-		(this.position = new PositionComponent(100, 200)),
-			(this.movement = new MovementCompnent(2, 'up')),
-			(this.sprite = new Sprite(texture));
+		this.movement = new MovementCompnent(0, Direction.Down);	
+		this.sprite = new Sprite(texture);
+		this.position = new PositionComponent(this.sprite);
+
+		this.position.setX(100)
+		this.position.setY(200)
 	}
 }
