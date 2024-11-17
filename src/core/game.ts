@@ -10,11 +10,13 @@ export class Game {
 	private exitGame = false;
 	private sceneManager: SceneManager;
 	private scenes: Record<string, Scene>;
+
 	constructor() {
 		this.app = new Application();
 		this.sceneManager = new SceneManager(this.app);
 		this.scenes = {};
 	}
+
 	public async start() {
 		// Init
 		addDevTools(this.app);
@@ -30,6 +32,7 @@ export class Game {
 		// Start game loop
 		this.gameLoop();
 	}
+
 	private gameLoop() {
 		this.app.ticker.add((ticker) => {
 			if (this.exitGame) ticker.stop();
